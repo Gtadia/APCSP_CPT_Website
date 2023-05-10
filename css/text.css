@@ -1,0 +1,59 @@
+.bold {
+    font-weight: bolder;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.main-title {
+    font-size: 3.5em;
+}
+
+.medium-title {
+    border-color: white; 
+    border-width: 3px; 
+    border-style:dashed;
+
+    font-size: 2em;
+}
+
+.sub-title {
+    border-color: white; border-width: 3px; border-style:dashed;
+}
+
+.underline-container {
+    width: fit-content;
+    height: fit-content;
+
+    /* Removes blue highlight when clicked */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none !important;
+}
+
+.underline {
+    white-space: nowrap;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+.underline::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #89142e;
+    position: absolute;
+    left: 0; 
+    top: calc(100% - 0.5rem);
+    transition: 0.5s; 
+    z-index: 1000; 
+}
+.underline:hover::after {
+    width: 100%;
+}
